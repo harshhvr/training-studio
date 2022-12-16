@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+a {
+  color: #00b7ff;
+}
+
+header.site-header {
+  z-index: 9999;
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 0.5rem;
+  background-color: #212529;
+  color: #a1a5a9;
+}
+header.site-header > nav.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+}
+header.site-header > nav.nav > a.logo {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+header.site-header > nav.nav > ul.nav-items {
+  display: flex;
+  position: relative;
+  list-style: none;
+}
+header.site-header > nav.nav > ul.nav-items > li.nav-item {
+  position: relative;
+}
+header.site-header > nav.nav > ul.nav-items > li.nav-item > a.nav-link {
+  display: block;
+  padding: 0.5rem 0.8rem;
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+footer.site-footer {
+  position: relative;
+  padding: 2rem;
+  background-color: #212529;
+  color: #fff;
+  text-align: center;
+}
+
+div.container-fluid {
+  position: relative;
+  padding: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+div.big-banner {
+  position: relative;
+  height: 100%;
+}
+div.big-banner > video.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(30%);
+}
+div.big-banner > div.banner-text-center {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: #fff;
+  font-weight: bolder;
+  text-align: center;
+}
+div.big-banner > div.banner-text-center > div.banner-text-1 {
+  font-size: 1.5rem;
+}
+div.big-banner > div.banner-text-center > div.banner-text-2 {
+  font-size: 5rem;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+section.section {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+section.section > div.title, section.section > div.description {
+  text-align: center;
+}
+section.section > div.title {
+  margin: 2rem 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+section.section > div.description {
+  color: #777;
+}
+
+div.classes-grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(80vmin, 1fr));
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+div.classes-grid > div.col > div.card {
+  margin: 0.5rem;
+  height: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+div.classes-grid > div.col > div.card:hover {
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.5);
+}
+div.classes-grid > div.col > div.card > div.card-head {
+  height: 40vmin;
+}
+div.classes-grid > div.col > div.card > div.card-head > img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+div.classes-grid > div.col > div.card > div.card-body {
+  padding: 1rem;
+}
+
+ul.days-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  list-style: none;
+}
+ul.days-list > li.item {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+ul.days-list > li.item::after {
+  content: "/";
+}
+ul.days-list > li.item:last-child::after {
+  display: none;
+}
+
+table.schedule-table {
+  position: relative;
+  margin: 0 auto;
+  width: 60%;
+  margin-bottom: 2rem;
+}
+
+table,
+tr,
+th,
+td {
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 2rem;
+}
+
+div.programs-grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(80vmin, 1fr));
+  margin: 1rem auto;
+  padding: 0.5rem;
+  width: 80%;
+}
+div.programs-grid > div.col > div.card {
+  margin: 0.5rem;
+  padding: 1rem;
+  height: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+div.programs-grid > div.col > div.card > a {
+  color: #ff6200;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+form.contact-form {
+  position: relative;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 60%;
+}
+form.contact-form > div.field {
+  position: relative;
+  padding: 1rem 0;
+}
+form.contact-form > div.field > label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+form.contact-form > div.field > input,
+form.contact-form > div.field textarea {
+  padding: 0.5rem;
+  width: 100%;
+}
+form.contact-form > div.options > button.btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #ff6200;
+  border: none;
+}
+form.contact-form > div.options > button.btn:focus {
+  outline: none;
+}
